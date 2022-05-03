@@ -21,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         binding.ibBrush.setOnClickListener {
             showBrushSizeChooserDialog()
         }
+        binding.ibUndo.setOnClickListener {
+            binding.drawingView.onClickUndo()
+        }
         mImageButtonCurrentPaint = binding.llPaintColors[2] as ImageButton
         mImageButtonCurrentPaint.setImageDrawable(
             ContextCompat.getDrawable(this, R.drawable.pallet_pressed)
